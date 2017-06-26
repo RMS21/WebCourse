@@ -25,7 +25,7 @@
 							</div>
                             <ul class="nav navbar-nav navbar-left">
                                 <li>
-                                    <a href="register.png">
+                                    <a href="{{ route('get_register') }}">
                                         ثبت نام
                                     </a>
                                 </li>

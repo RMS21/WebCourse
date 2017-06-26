@@ -53,25 +53,33 @@ li a{
 .navbar{
     box-shadow: none;
 }
+.register{
+    direction:rtl;
+}
+.control-label{
+    right:0;
+}
+form{
+    width:80%;
+    margin:auto;
+}
 .row{
     margin-left: 0;
     margin-right: 0;
 }
-h3{
-    font-size: 15px;
-    text-align: center;
-    font-weight: bold;
+.name-family div:first-child{
+    padding-right:2.5px !important;
+    padding-left:0px !important;
 }
-h4{
-    font-size: 11.5px;
-    text-align: center;
-}
-.login{
-    margin-top: 70px;
+.name-family div:first-child + div{
+    padding-right:0px !important;
+    padding-left:2.5px !important;
 }
 .form-control{
     background-image:linear-gradient(#009ddc, #009ddc), linear-gradient(#D2D2D2, #D2D2D2) !important;
-    direction: rtl ;
+}
+.form-group.has-error.is-focused .form-control{
+    background-image:linear-gradient( #f44336,#f44336 ), linear-gradient(#D2D2D2, #D2D2D2) !important;
 }
 #submit{
     border-radius: 10px;
@@ -85,12 +93,23 @@ h4{
     background-color:#0079aa;
     background-image:linear-gradient(#0079aa,#0079aa) !important;
 }
+h3{
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+h4{
+    font-size: 11.5px;
+    text-align: center;
+}
 .not-found div{
     text-align: center;
     background-color:#e53935;
     border-radius: 10px !important;
     color:#fff;
     display: none;
+    width:80%;
+    margin:auto;
 }
 .not-found p{
     margin: 0 !important;
@@ -99,4 +118,7 @@ h4{
 .webui-popover-content{
     text-align: center;
     color:#f44336;
+}
+p{
+    margin:0 !important;
 }

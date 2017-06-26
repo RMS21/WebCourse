@@ -61,7 +61,12 @@ $(document).ready(function(){
             }
         })
         .fail(function(data) {
-            console.log(data.responseJSON);
+            $(".not-found div").slideDown(1000,function(){
+                    $(".not-found div").css("padding","0.1px 0");
+                    setTimeout(function() {
+                        $(".not-found div").slideUp(1000);
+                    }, 3000);
+                });
         });
     });
 });

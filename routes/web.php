@@ -11,17 +11,38 @@
 |
 */
 
-Route::get('/', [
-  'uses' => 'UserController@getLogin',
-  'as' => 'get_login'
-]);
+Route::group(['middleware' => ['web']], function(){
 
-Route::get('/login', [
-  'uses' => 'UserController@getLogin',
-  'as' => 'get_login'
-]);
+  Route::get('/', [
+    'uses' => 'UserController@getLogin',
+    'as' => 'get_login'
+  ]);
 
-Route::post('/login', [
-  'uses' => 'UserController@postLogin',
-  'as' => 'post_login'
-]);
+  Route::get('/login', [
+    'uses' => 'UserController@getLogin',
+    'as' => 'get_login'
+  ]);
+
+  Route::post('/login', [
+    'uses' => 'UserController@postLogin',
+    'as' => 'post_login'
+  ]);
+
+  Route::get('/register', [
+    'uses' => 'UserController@getRegister',
+    'as' => 'get_register'
+  ]);
+
+  Route::post('/register', [
+    'uses' => 'UserController@postRegister',
+    'as' => 'post_register'
+  ]);
+
+  Route::group(['middleware' => ['auth']], function(){
+    Route::get('/home', [
+      'uses' => 'UserController@getHome',
+      'as' => 'get_home'
+    ]);
+  });
+
+});
