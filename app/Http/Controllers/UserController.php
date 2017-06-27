@@ -57,7 +57,7 @@ class UserController extends Controller{
         return view('user.home', [ 'user' => Auth::user() ]);
     }
 
-    public function logout(){
+    public function getLogout(){
         Auth::logout();
         return redirect()->route('get_login');
     }

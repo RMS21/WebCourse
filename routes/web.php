@@ -11,38 +11,50 @@
 |
 */
 
-Route::group(['middleware' => ['web']], function(){
-
-  Route::get('/', [
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/', [
     'uses' => 'UserController@getLogin',
     'as' => 'get_login'
   ]);
 
-  Route::get('/login', [
+    Route::get('/login', [
     'uses' => 'UserController@getLogin',
     'as' => 'get_login'
   ]);
 
-  Route::post('/login', [
+    Route::get('/logout', [
+        'uses' => 'UserController@getLogout',
+        'as' => 'get_logout'
+    ]);
+
+    Route::post('/login', [
     'uses' => 'UserController@postLogin',
     'as' => 'post_login'
   ]);
 
-  Route::get('/register', [
+    Route::get('/register', [
     'uses' => 'UserController@getRegister',
     'as' => 'get_register'
   ]);
 
-  Route::post('/register', [
+    Route::post('/register', [
     'uses' => 'UserController@postRegister',
     'as' => 'post_register'
   ]);
 
-  Route::group(['middleware' => ['auth']], function(){
-    Route::get('/home', [
-      'uses' => 'UserController@getHome',
-      'as' => 'get_home'
-    ]);
-  });
+    Route::get('/create/news', [
+      'uses' => 'ReporterController@getCreateNews',
+      'as' => 'get_create_news'
+  ]);
+  Route::post('/create/news', [
+      'uses' => 'ReporterController@postCreateNews',
+      'as' => 'post_create_news'
+  ]);
 
+    Route::group(['middleware' => ['auth']], function () {
+        Route::get('/home', [
+          'uses' => 'UserController@getHome',
+          'as' => 'get_home'
+        ]);
+    });
 });

@@ -1,6 +1,6 @@
 @extends('../partial.layout')
 
-@section('title', 'Login')
+@section('title', 'ورود')
 
 @section('css')
     <link rel="stylesheet" href="{{ URL::to('assets/css/login.css') }}">

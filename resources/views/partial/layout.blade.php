@@ -27,7 +27,6 @@
     <script src="{{ URL::to('assets/js/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ URL::to('assets/Material-Kit/assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ URL::to('assets/Material-Kit/assets/js/material.min.js') }}"></script>
-    <script src="{{ URL::to('assets/Material-Kit/assets/js/material-kit.js') }}"></script>
     <script src="{{ URL::to('assets/webui-popover-master/src/jquery.webui-popover.js') }}"></script>
     @yield('js')
 </html>
