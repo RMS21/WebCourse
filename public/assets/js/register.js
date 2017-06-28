@@ -187,6 +187,9 @@ $(document).ready(function() {
             }, 3000);
           });
         }
+        if(data.url){
+          window.location = data.url;
+        }
       },
       error: function() {
         $(".not-found div").slideDown(1000, function() {

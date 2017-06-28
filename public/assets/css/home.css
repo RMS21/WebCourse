@@ -1,0 +1,178 @@
+@font-face{
+    font-family: IRANSans ;
+    font-style: normal ;
+    font-weight: normal;
+    src:url("../fonts/irsans.ttf");
+}
+*:not(.glyphicon):not(.material-icons) {
+    font-family: IRANSans !important;
+}
+html{
+    height: 100% ;
+}
+body{
+    padding: 0 ;
+    margin: 0 ;
+    background-color: #F5F5F5 !important;
+}
+
+.container-fluid{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.navbar{
+    padding: 0px !important;
+}
+.navbar-brand{
+    height: 58px !important;
+    width: 58px !important;
+}
+.navbar-brand img{
+    position:absolute;
+    height: 50px;
+    left:0;
+    top:0;
+    margin-top:4px;
+}
+li{
+    margin-top: 15px;
+}
+li a{
+    font-size: 12px !important;
+    font-weight: bold !important;
+    line-height: 0px !important;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+}
+.myactive{
+    border-radius: 20px;
+    color:#fff;
+    background-color: #206ce8 ;
+}
+.navbar{
+    box-shadow: none;
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.navbar-nav.navbar-right{
+    margin-right:50px !important;
+
+}
+.navbar-rose{
+    top:-20px;
+    background-color:#009ddc !important;
+}
+.category li{
+    top: -5px !important;
+}
+.bootcards-richtext > .panel-heading , .bootcards-richtext > .panel-body , .bootcards-richtext > .panel-footer {
+    background-color: 	#ffffff ;
+}
+.glyphicon-remove-circle{
+    color: #f44336;
+    font-size: 20px;
+    top:3px;
+}
+.panel-heading span{
+    font-size: 15px;
+    padding-right: 10px;
+}
+.panel-heading{
+    border-bottom: none !important;
+}
+.panel-heading a{
+    display: inline-block;
+}
+.post-image{
+    margin: 0;
+    padding: 0 ;
+}
+.post-image img{
+    width:100%;
+    min-height: 100px;
+}
+.post-image p{
+    padding: 15px;
+}
+ul.post-comments {
+    margin-top: 13px;
+    margin-bottom: 2px ;
+    list-style-type: none;
+    padding-left: 0;
+    max-height: 200px;
+    overflow-y: hidden;
+    display: none;
+}
+ul.post-comments > li.comment {margin-top: 6.9px;}
+ul.post-comments > li.comment > .comment-username {font-weight: bold;}
+.modal-liker-post-text{
+    display: inline-block;
+    font-size: 15px;
+}
+.modal-liker-post-text .glyphicon-heart{color: #f44336;}
+
+.modal-liker-post-text span:nth-child(2) {color: #202020;}
+
+.comment-post-text{
+    display: inline-block;
+    font-size: 15px ;
+    padding-left: 5px;
+    color: #202020;
+    margin-right: 8.5px;
+}
+.comment-post-text:hover{
+    cursor: pointer;
+}
+.comment-post-text span:nth-child(1) {
+    color: #1976D2 !important;
+}
+.heart{
+    font-size: 2em;
+    right:10px ;
+    color: #BDBDBD;
+    top:10px;
+}
+.heart:hover{color: #f44336 ;}
+textarea{
+    overflow-y: hidden !important;
+}
+.form-group.is-focused .form-control{
+    background-image:linear-gradient(#009ddc, #009ddc), linear-gradient(#D2D2D2, #D2D2D2) !important;
+}
+.author{
+    position: relative;
+    top:-75px;
+}
+.avatar{
+    width:45px  !important;
+    height: 45px !important;
+}
+.media-footer button{
+    color:#009ddc !important;
+    background-color: #fafafa !important;
+    border:1px solid #009ddc !important;
+}
+.panel-footer{
+    border-top: none;
+}
+.btn{
+    padding: 8px 15px !important;
+}
+form{
+    margin-bottom: -70px !important;
+}
+.tags{
+    margin:10px 0;
+    margin-right: 5px;
+    background-color: #ffffff;
+}
+.tags a{
+    text-decoration: none;
+    background-color: #28c1ff;
+    border-radius: 5px;
+    color:#fff;
+    padding:6px;
+}

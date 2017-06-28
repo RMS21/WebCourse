@@ -51,6 +51,9 @@ $(document).ready(function(){
             data: formData,
         })
         .done(function(data) {
+            if(data.url){
+                window.location = data.url;
+            }
             if (data.fail){
                 $(".not-found div").slideDown(1000,function(){
                     $(".not-found div").css("padding","0.1px 0");

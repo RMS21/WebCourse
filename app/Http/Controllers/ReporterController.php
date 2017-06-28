@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+
 use App\News;
 use App\Tag;
 use App\NewsTag;
@@ -39,6 +42,7 @@ class ReporterController extends Controller
         }
         $news->image_path = $image_path;
         $news->category_id = Category::where('name', '=', $request->category)->first()->id;
+        $news->user_username = Auth::user()->username;
         $news->save();
 
         $tags = explode(",", $request->tags);

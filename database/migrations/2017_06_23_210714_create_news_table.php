@@ -20,6 +20,7 @@ class CreateNewsTable extends Migration
             $table->text('description');
             $table->string('image_path')->nullable();
             $table->unsignedInteger('category_id');
+            $table->string('user_username');
             $table->timestamps();
         });
 
