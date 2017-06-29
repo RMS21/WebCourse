@@ -37,10 +37,14 @@ Route::group(['middleware' => ['web']], function () {
     'as' => 'post_register'
   ]);
 
-    Route::get('/{category?}', [
+    Route::get('/{param?}', [
           'uses' => 'UserController@getHome',
           'as' => 'get_home'
         ]);
+    Route::post('/search/tag', [
+    'uses' => 'UserController@postSearchTag',
+    'as' => 'post_search_tag'
+  ]);
 
     Route::group(['middleware' => ['auth']], function () {
         Route::get('/create/news', [
@@ -61,7 +65,7 @@ Route::group(['middleware' => ['web']], function () {
     'as' => 'post_comment_news'
   ]);
 
-  Route::get('delete/news/{news_id}', [
+        Route::get('delete/news/{news_id}', [
     'uses' => 'AdminController@getDeleteNews',
     'as' => 'get_delete_news'
   ]);

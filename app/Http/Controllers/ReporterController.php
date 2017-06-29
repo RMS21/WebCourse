@@ -17,7 +17,8 @@ class ReporterController extends Controller
     public function getCreateNews()
     {
         $categories = Category::all();
-        return view('reporter.create_news', [ 'categories' => $categories ]);
+        $user = Auth::user();
+        return view('reporter.create_news', [ 'categories' => $categories, 'user' => $user ]);
     }
 
     public function postCreateNews(Request $request)

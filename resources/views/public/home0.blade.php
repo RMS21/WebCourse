@@ -62,7 +62,15 @@
                                         </a>
                                     </li>
                                 @endif
-                        </ul>
+
+                                {{-- @if(isset($user))
+                                    <li class="myactive">
+                                        <a href="login.html">
+                                            پروفایل
+                                        </a>
+                                    </li>
+                                @endif --}}
+                            </ul>
 							<ul class="nav navbar-nav navbar-left">
                                 @if (isset($user))
                                     <li>
@@ -102,7 +110,7 @@
                         </ul>
                         <form class="navbar-form navbar-left" role="search" method="post" action="{{ route('post_search_tag') }}">
                           <div class="form-group form-white">
-                              <input type="text" class="form-control" placeholder="جستوجو..." name="text">
+                              <input type="text" class="form-control" placeholder="جستوجو با تگ..." name="text">
                           </div>
                           <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini"><i class="material-icons">search</i></button>
                           <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -199,8 +207,7 @@
                         @endforeach
                     @endif
                 </div>
-            </div>
-            <div class="row text-center">
+
                 @include('../partial.pagination', ['paginator' => $newses])
             </div>
         </div>

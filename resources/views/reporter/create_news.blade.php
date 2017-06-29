@@ -40,10 +40,6 @@
               <a class="navbar-brand" href="{{ route('get_home') }}">
                     <img src="{{ URL::to('assets/img/logo.png') }}">
                 </a>
-              <div class="username">
-                <span>کامران عبدی</span>
-              </div>
-
             </div>
             <ul class="nav navbar-nav navbar-left">
               <li class="my-active">

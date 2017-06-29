@@ -4,7 +4,7 @@ $link_limit = 5; // maximum number of links (a little bit inaccurate, but will b
 ?>
 
 @if ($paginator->lastPage() > 1)
-    <ul class="pagination">
+    <ul class="pagination pagination-primary">
         <li class="{{ ($paginator->currentPage() == 1) ? ' disabled' : '' }}">
             <a href="{{ $paginator->url(1) }}">First</a>
          </li>
